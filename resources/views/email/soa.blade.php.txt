@@ -1,0 +1,13 @@
+<h4>
+    MDC Guidance Record System, Cooperative Inc. <br>
+    Cabulijan, Tubigon, Bohol
+</h4>
+
+<h1>Guidance Record Statement</h1>
+
+<p>
+    Dear {{ $student->fname }}!
+</p>
+<p>
+    Here is your Guidance Record in Mater Die Guidance System .
+</p>

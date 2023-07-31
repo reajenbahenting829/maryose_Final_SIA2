@@ -1,0 +1,27 @@
+<?php
+
+namespace Database\Factories;
+
+use App\Models\Employee;
+use Illuminate\Database\Eloquent\Factories\Factory;
+
+/**
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Employee>
+ */
+class EmployeeFactory extends Factory
+{
+    protected $model = Employee::class;
+
+    public function definition()
+    {
+        $jobs = ['MANAGER', 'SUPERVISOR', 'CASHIER', 'PROMODISER', 'BAGGER'];
+        return [
+            'fname' => $this->faker->firstName,
+            'lname' => $this->faker->lastName,
+            'age' => $this->faker->numberBetween(18, 25),
+            'address' => $this->faker->address,
+            'job' => $this->faker->randomElement($jobs),
+            'year' => $this->faker->randomElement(['1 Year', '2 Year', '3 Year', '4 Year', ' 5 Year', '6 Year', '8 Year', '9 Year', '10 Year']),
+        ];
+    }
+}
